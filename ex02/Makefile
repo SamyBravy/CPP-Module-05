@@ -10,10 +10,10 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = form
+NAME = 
 SRC = main.cpp \
 	Bureaucrat.cpp \
-	Form.cpp
+	AForm.cpp
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++

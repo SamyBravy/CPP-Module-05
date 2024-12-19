@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdell-er <sdell-er@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/17 12:47:10 by sdell-er          #+#    #+#             */
-/*   Updated: 2024/12/17 12:47:11 by sdell-er         ###   ########.fr       */
+/*   Created: 2024/12/16 19:59:31 by samuele           #+#    #+#             */
+/*   Updated: 2024/12/17 12:48:03 by sdell-er         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,19 @@ void Bureaucrat::decrementGrade()
     if (_grade == 150)
         throw Bureaucrat::GradeTooLowException();
     _grade++;
+}
+
+void Bureaucrat::signForm(Form &form) const
+{
+    try
+    {
+        form.beSigned(*this);
+        std::cout << _name << " signed " << form.getName() << std::endl;
+    }
+    catch(const std::exception &e)
+    {
+        std::cout << _name << " couldn’t sign " << form.getName() << " because " << e.what() << std::endl;
+    }
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
