@@ -10,13 +10,14 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = executeForm
+NAME = Intern
 SRC = main.cpp \
 	Bureaucrat.cpp \
 	AForm.cpp \
 	ShrubberyCreationForm.cpp \
 	RobotomyRequestForm.cpp \
-	PresidentialPardonForm.cpp
+	PresidentialPardonForm.cpp \
+	Intern.cpp
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
